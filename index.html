@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bulk Image Loader</title>
+    <script src="BulkImageLoader.js"></script>
+    
+    <script>
+    
+      var finishedFunc = function(){
+        console.log( il.getImage("Image One") );
+      }
+    
+      var il = new BulkImageLoader("Loader One", finishedFunc);
+      il.debug(true);
+      il.addFileToLoad("Image One", "one.jpg");
+      il.addFileToLoad("Image Two", "two.jpg");
+      il.addFileToLoad("Image Three", "three.jpg");
+      il.addFileToLoad("Image Four", "four.jpg");
+      il.load();
+      
+    </script>
+    
+  </head>
+  <body>
+    
+  </body>
+</html>
